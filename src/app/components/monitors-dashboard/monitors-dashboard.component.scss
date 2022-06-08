@@ -1,0 +1,51 @@
+
+.header-container {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header {
+  font-size: 6vw;
+  font-family: Heebo light;
+}
+
+.body-container {
+  padding: 3vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
+  gap: 2vh;
+}
+
+.project-preview {
+  padding-left: 15px;
+}
+
+mat-card-title, mat-card-actions {
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-content {
+  font-family: Heebo Light;
+}
+.project-card-subtitle {
+    font-family: Heebo Light;
+}
+.project-card-title {
+    font-family: Heebo Light;
+}
+.project-card-btn {
+    font-family: Heebo Light;
+}
+.mat-card>.mat-card-actions:last-child {
+  direction: rtl;
+}
