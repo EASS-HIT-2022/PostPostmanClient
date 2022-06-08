@@ -1,24 +1,24 @@
 <div class="homepage-container">
     <div class="homepage-title">
-        <span class="h1">Hey!</span>
-        <span class="h2">Good to see you!</span>
-        <span class="h3">What would you like to do today?</span>
+        <img src="assets/images/PostPostmanLogo.png" />
+        <span class="h1">Hey! Good to see you!</span>
+        <span class="h2">What would you like to do today?</span>
     </div>
     <div class="homepage-cards">
-        <mat-card class="new-monitor-card">
+        <mat-card class="new-monitor-card" routerLink="add">
             <mat-card-title>
                 Create a new monitor
             </mat-card-title>
             <mat-card-content>
-                <mat-icon>home</mat-icon>
+                <mat-icon>add_circle</mat-icon>
             </mat-card-content>
         </mat-card>
-        <mat-card class="monitors-dashboard-card">
+        <mat-card class="monitors-dashboard-card" routerLink="dashboard">
             <mat-card-title>
                 Go to monitor's dashboard
             </mat-card-title>
             <mat-card-content>
-                <mat-icon>home</mat-icon>
+                <mat-icon>dashboard</mat-icon>
             </mat-card-content>
         </mat-card>
     </div>

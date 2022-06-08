@@ -1,25 +1,22 @@
 .homepage-container {
     height: 100%;
     width: 100%;
+    overflow-y: hidden;
 }
 
 .homepage-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     .h1 {
         font-family: Heebo;
-        font-size: 46px;
+        font-size: 36px;
     }
     .h2 {
         font-family: Heebo Light;
-        font-size: 30px;
-    }
-    .h3 {
-        font-family: Heebo Light;
-        font-size: 22px;
+        font-size: 26px;
     }
 }
 
@@ -31,8 +28,8 @@
 
 mat-card {
     background-color: whitesmoke;
-    height: 40%;
-    width: 30%;
+    height: 30%;
+    width: 25%;
     mat-card-title {
         font-family: Heebo Light;
     }
@@ -53,5 +50,5 @@ mat-card {
 
 mat-card:hover {
     cursor: pointer;
-    background-color: gray
+    background-color: rgba(#9C27B0, 0.6)
 }

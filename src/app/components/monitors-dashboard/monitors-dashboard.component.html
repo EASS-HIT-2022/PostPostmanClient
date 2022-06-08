@@ -1,0 +1,19 @@
+<div class="header-container">
+    <span class="header">your monitors</span>
+</div>
+<div class="body-container">
+    <mat-card class="project-card" *ngFor="let monitor of monitorsMockData">
+        <div>
+        <mat-card-header>
+            <mat-card-title class="project-card-title">{{monitor.name}}</mat-card-title>
+        </mat-card-header>
+    <!--    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+        <mat-card-content class="project-card-content">
+            <p class="project-preview">
+            {monitor.description}}
+            </p>
+        </mat-card-content>
+        </div>
+    </mat-card>
+</div>
+

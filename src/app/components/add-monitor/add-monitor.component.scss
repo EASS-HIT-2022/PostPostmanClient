@@ -1,0 +1,37 @@
+.add-monitor-container {
+    padding: 2%;
+    overflow: hidden;
+    .title {
+        font-family: Heebo;
+        font-size: 36px;
+    }
+}
+
+.add-monitor-content {
+    display: flex;
+    .add-monitor-info, .add-monitor-form {
+        width: 45%;
+        padding: 2%;
+    }
+
+    .add-monitor-info {
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        border-right: solid 2px gray;    
+    }
+
+    p {
+        font-family: Heebo;
+    }
+    
+    .list-text {
+        font-family: Heebo Light !important;
+    }
+}
+
+
+
