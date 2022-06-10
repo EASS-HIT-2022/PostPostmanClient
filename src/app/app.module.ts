@@ -11,6 +11,10 @@ import { AddMonitorFormComponent } from './components/add-monitor-form/add-monit
 import { MonitorsDashboardComponent } from './components/monitors-dashboard/monitors-dashboard.component';
 import { MonitorComponent } from './components/monitor/monitor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SuccessSnackbarComponent } from './components/success-snackbar/success-snackbar.component';
+import { SuccessRunComponent } from './components/success-run/success-run.component';
+import { SuccessRunSnackbarComponent } from './components/success-run-snackbar/success-run-snackbar.component';
 
 
 @NgModule({
@@ -20,7 +24,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddMonitorComponent,
     AddMonitorFormComponent,
     MonitorsDashboardComponent,
-    MonitorComponent
+    MonitorComponent,
+    SuccessSnackbarComponent,
+    SuccessRunComponent,
+    SuccessRunSnackbarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

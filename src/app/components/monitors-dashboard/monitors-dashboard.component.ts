@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MonitorsService } from 'src/app/services/monitors.service';
+import { SuccessRunSnackbarComponent } from '../success-run-snackbar/success-run-snackbar.component';
 
 @Component({
   selector: 'app-monitors-dashboard',
@@ -7,37 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonitorsDashboardComponent implements OnInit {
 
-  monitorsMockData = [
-    {
-      name: "test 1",
-      description: "test 1 description",
-      collection_url: "test 1 collection url",
-    },
-    {
-      name: "test 2", 
-      description: "test 2 description",
-      collection_url: "test 2 collection url",
-    },
-    {
-      name: "test 3",
-      description: "test 3 description",
-      collection_url: "test 3 collection url",
-    },
-    {
-      name: "test 4",
-      description: "test 4 description",
-      collection_url: "test 4 collection url",
-    },
-    {
-      name: "test 5",
-      description: "test 5 description",
-      collection_url: "test 5 collection url",
-    }
-  ];
+  monitors: any[] = [];
+  monitorsLoaded: boolean = false;
 
-  constructor() { }
+  constructor(private monitorsService: MonitorsService,
+              private _snackBar: MatSnackBar) { 
+  }
 
   ngOnInit(): void {
+    this.monitorsService.getAllMonitors().subscribe(monitors => {
+      setTimeout( () => {
+        this.monitors = monitors;
+        this.monitorsLoaded = true;
+      }, 2000)
+    })
+  }
+
+  executeMonitor(monitorId: string) {
+    this.monitorsService.executeMonitor(monitorId).subscribe(response => {
+      if(response.acknowledged) {
+        this._snackBar.openFromComponent(SuccessRunSnackbarComponent, {
+          duration: 3000,
+        });
+      }
+    });
   }
 
 }

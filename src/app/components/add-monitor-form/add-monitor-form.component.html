@@ -1,1 +1,21 @@
-<p>add-monitor-form works!</p>
+<P>
+    Fill your new monitor information HERE.
+</P>
+<form [formGroup]="newMonitorForm" >
+<mat-form-field appearance="standard">
+   <mat-label>your monitor's name</mat-label>
+   <input matInput formControlName="name">
+</mat-form-field>
+<mat-form-field appearance="standard">
+   <mat-label>your monitor's description</mat-label>
+   <textarea matInput formControlName="description"></textarea>
+</mat-form-field>
+<mat-form-field appearance="standard">
+   <mat-label>collection url (from Postman)</mat-label>
+   <textarea matInput formControlName="collection_url"></textarea>
+   </mat-form-field>
+</form>
+<div class="font-change">
+<button mat-stroked-button [disabled]="!newMonitorForm.valid" (click)="submit()">Add</button>
+</div>
+ 

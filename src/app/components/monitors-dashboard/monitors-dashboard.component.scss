@@ -1,17 +1,11 @@
-
-.header-container {
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+.container {
+    padding: 3%;
 }
-
-.header {
-  font-size: 6vw;
-  font-family: Heebo light;
+.page-title {
+    color: #9C27B0;
+    font-size: 36px;
+    padding: 3%;
+    font-family: Heebo;
 }
 
 .body-container {
@@ -21,31 +15,30 @@
   gap: 2vh;
 }
 
-.project-preview {
-  padding-left: 15px;
-}
-
-mat-card-title, mat-card-actions {
-}
-
-.project-card {
+.monitor-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.project-card-content {
+.monitor-card-content {
   font-family: Heebo Light;
 }
-.project-card-subtitle {
-    font-family: Heebo Light;
+
+.monitor-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.project-card-title {
+
+.monitor-card-title {
     font-family: Heebo Light;
+    color: #9C27B0
 }
-.project-card-btn {
-    font-family: Heebo Light;
-}
-.mat-card>.mat-card-actions:last-child {
-  direction: rtl;
+
+.progress-bar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

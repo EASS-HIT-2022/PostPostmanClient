@@ -1,17 +1,27 @@
-<div class="header-container">
-    <span class="header">your monitors</span>
+<div class="container" *ngIf="this.monitorsLoaded; else loader">
+    <span class="page-title">Don't forget to check your monitors...</span>
+    <div class="body-container">
+        <mat-card class="monitor-card" *ngFor="let monitor of this.monitors">
+            <div>
+            <mat-card-header>
+                <mat-card-title class="monitor-card-title">{{monitor.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="monitor-card-content">
+                <p class="project-preview">
+                {{monitor.description}}
+                </p>
+                <button mat-icon-button class="start-monitor" matTooltip="run monitor" color="primary" (click)="this.executeMonitor(monitor._id)">
+                    <mat-icon>
+                        play_arrow
+                    </mat-icon>
+                </button>
+            </mat-card-content>
+            </div>
+        </mat-card>
+    </div>
 </div>
-<div class="body-container">
-    <mat-card class="project-card" *ngFor="let monitor of monitorsMockData">
-        <div>
-        <mat-card-header>
-            <mat-card-title class="project-card-title">{{monitor.name}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="project-card-content">
-            <p class="project-preview">
-            {{monitor.description}}
-            </p>
-        </mat-card-content>
-        </div>
-    </mat-card>
-</div>
+<ng-template #loader>
+    <div  class="progress-bar">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+</ng-template>
