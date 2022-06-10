@@ -1,1 +1,19 @@
-<p>monitor works!</p>
+<div class="container" *ngIf="this.monitorDataReady && this.monitorExecutionsReady; else loader">
+    <span class="title">Last 10 executions for monitor </span>
+    <span class="title" style="color: #9C27B0;">{{this.monitorData.name}}</span>
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let execution of this.monitorExecutions">
+            <mat-card>
+                <span>{{execution.time}}</span>
+                <span>total : {{execution.stats.total}}</span>
+                <span>failed : {{execution.stats.failed}}</span>
+                <span>{{this.getPercentage(execution.stats.total, execution.stats.failed)}} %</span>
+            </mat-card>
+        </mat-list-item>
+    </mat-list>
+</div>
+<ng-template #loader>
+    <div  class="progress-bar">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+</ng-template>

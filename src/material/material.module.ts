@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
+
 
 
 const modules = [ MatCardModule,
@@ -19,7 +21,9 @@ const modules = [ MatCardModule,
                   MatButtonModule,
                   MatTooltipModule,
                   MatSnackBarModule,
-                  MatProgressBarModule ];
+                  MatProgressBarModule,
+                  MatListModule
+                ];
 
 @NgModule({
   declarations: [],

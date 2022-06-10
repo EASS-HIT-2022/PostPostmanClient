@@ -1,0 +1,29 @@
+.progress-bar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 3%;
+}
+
+.title {
+    font-size: 34px;
+    font-family: Heebo;
+}
+
+mat-list-item {
+    width: 80%;
+    margin-bottom: 10px;
+
+
+    mat-card {
+        width: 100%;
+        background-color: whitesmoke;
+        color: #9C27B0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
