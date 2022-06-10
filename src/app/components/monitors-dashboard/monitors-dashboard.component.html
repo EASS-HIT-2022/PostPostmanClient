@@ -1,9 +1,9 @@
 <div class="container" *ngIf="this.monitorsLoaded; else loader">
     <span class="page-title">Don't forget to check your monitors...</span>
     <div class="body-container">
-        <mat-card class="monitor-card" *ngFor="let monitor of this.monitors" routerLink="{{monitor._id}}">
+        <mat-card class="monitor-card" *ngFor="let monitor of this.monitors">
             <div>
-            <mat-card-header>
+            <mat-card-header routerLink="{{monitor._id}}">
                 <mat-card-title class="monitor-card-title">{{monitor.name}}</mat-card-title>
             </mat-card-header>
             <mat-card-content class="monitor-card-content">

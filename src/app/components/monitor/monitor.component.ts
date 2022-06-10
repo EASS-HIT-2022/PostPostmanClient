@@ -24,6 +24,14 @@ export class MonitorComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.monitorId = params['monitorId'];
     });
+    this.loadExecutionData();
+    this.monitorService.getMonitorById(this.monitorId).subscribe(monitorData => {
+      this.monitorData = monitorData;
+      this.monitorDataReady = true;
+    })
+  }
+
+  loadExecutionData() {
     this.monitorService.getExecutionsDataByMonitorId(this.monitorId).subscribe(executionsArr => {
       this. monitorExecutions =  executionsArr.map((executionItem: any) => {
           return {
@@ -36,10 +44,6 @@ export class MonitorComponent implements OnInit {
       console.log(this.monitorExecutions);
       this.monitorExecutionsReady = true;
     });
-    this.monitorService.getMonitorById(this.monitorId).subscribe(monitorData => {
-      this.monitorData = monitorData;
-      this.monitorDataReady = true;
-    })
   }
 
   getPercentage(total: number, failed: number) {

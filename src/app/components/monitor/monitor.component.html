@@ -1,6 +1,15 @@
 <div class="container" *ngIf="this.monitorDataReady && this.monitorExecutionsReady; else loader">
-    <span class="title">Last 10 executions for monitor </span>
-    <span class="title" style="color: #9C27B0;">{{this.monitorData.name}}</span>
+    <div class="header">
+        <div>
+            <span class="title">Last 10 executions for monitor </span>
+            <span class="title" style="color: #9C27B0;">{{this.monitorData.name}}</span>
+        </div>
+        <div>
+            <button mat-icon-button (click)="this.loadExecutionData">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </div>
+    </div>
     <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let execution of this.monitorExecutions">
             <mat-card>
