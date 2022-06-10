@@ -6,4 +6,6 @@
 > 1. Adding monitors
 > 2. Monitor last Results - for exploring
 
+*** for watching demo VIDEO of PostPostman client https://youtu.be/LwOvHFLkxlc
+
 ***For setup instructions of PostPostman Please goto https://github.com/EASS-HIT-2022/PostPostman README file***
