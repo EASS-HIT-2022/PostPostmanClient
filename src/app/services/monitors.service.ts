@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MonitorsService {
 
-  apiUrl = 'http://localhost:8000/';
+  apiUrl = 'http://ec2-18-212-226-39.compute-1.amazonaws.com:8080/';
 
   constructor(public http: HttpClient) { }
 
